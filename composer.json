@@ -1,0 +1,39 @@
+{
+	"name" : "phuong17889/yii2-daemon",
+	"description" : "Yii2 Email Manager",
+	"type" : "yii2-extension",
+	"license" : "MIT",
+	"keywords" : [
+		"yii2",
+		"daemon",
+		"module",
+		"component"
+	],
+	"authors" : [
+		{
+			"name" : "Le Phuong",
+			"email" : "phuong17889@gmail.com",
+			"homepage" : "http://navatech.vn",
+			"role" : "Developer"
+		}
+	],
+	"homepage" : "https://navatech.vn",
+	"support" : {
+		"source" : "https://github.com/phuong17889/yii2-daemon"
+	},
+	"minimum-stability" : "stable",
+	"require" : {
+		"php" : ">=5.6.0",
+		"yiisoft/yii2" : "~2.0.4",
+		"react/event-loop" : "~0.4"
+	},
+	"suggest" : {
+		"cboden/ratchet" : "to use loop instead of for-cycle in daemon",
+		"navatech/yii2-setting" : "1.0.*"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"phuong17889\\daemon\\" : "src/"
+		}
+	}
+}
