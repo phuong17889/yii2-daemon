@@ -52,8 +52,8 @@ abstract class DaemonController extends Controller {
 		$file = \Yii::getAlias('@runtime/daemons/' . $this->name() . '.bin');
 		if (file_exists($file)) {
 			$current_pid = file_get_contents($file);
-			if (file_exists("/proc/$pid")) {
-				exec("kill $child 2> /dev/null");
+			if (file_exists("/proc/$current_pid")) {
+				exec("kill $current_pid 2> /dev/null");
 			}
 		}
 	}
@@ -79,7 +79,7 @@ abstract class DaemonController extends Controller {
 		}
 		if (file_exists($file)) {
 			$current_pid = file_get_contents($file);
-			if (file_exists("/proc/$pid")) {
+			if (file_exists("/proc/$current_pid")) {
 				return false;
 			}
 		}
